@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="DifficultyScreen.css">
+        <script src="difficultyChoice.js"></script>
+    </head>
+    <body>
+        <div class="container" id="top">
+            <div class="smallercontainerstop" id="top-left">
+                <button class="round" onclick="location.href='MainScreen.html';"><img id="back" src="./images/back icon.png"></button>
+            </div>
+
+            <div class="smallercontainerstop" id="top-middle">
+                <div class="evensmallercontainerstop">
+                    <h1 id="title">Choose your difficulty</h1>
+                    <p id="selection-display">Difficulty chosen: Not selected</p>
+                </div>
+            </div>
+
+            <div class="smallercontainerstop" id="top-right">
+                <button class="round" onclick="location.href='GameScreen.html';"><img id="proceed" src="./images/proceed-icon.png"></button>
+            </div>
+            
+        </div>
+
+        <div class="container" id="bottom">
+            <div class="smallcontainersbot" id="quad1">
+                <button id="Novice" class="rectangle"><img src="./images/pokeball.jpg"></button>
+                <h2>Novice</h2>
+                <p>Very slow pace, beginner-friendly</p>
+            </div>
+            
+            <div class="smallcontainersbot" id="quad2">
+                <button id="Great" class="rectangle"><img src="./images/great-ball.jpg"></button>
+                <h2>Great</h2>
+                <p>Normal pace</p>
+            </div>
+
+            <div class="smallcontainersbot" id="quad3">
+                <button id="Ultra" class="rectangle"><img src="./images/ultra-ball.jpg"></button>
+                <h2>Ultra</h2>
+                <p>Faster pace</p>
+            </div>
+
+            <div class="smallcontainersbot" id="quad4">
+                <button id="Master" class="rectangle"><img src="./images/master-ball.jpg"></button>
+                <h2>Master</h2>
+                <p>Lightning speed</p>
+            </div>
+            
+        </div>
+
+    </body>
+</html>

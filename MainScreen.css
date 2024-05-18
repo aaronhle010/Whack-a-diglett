@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'Pokemon Solid';
+    src: url(fonts/pokemon/Pokemon\ Solid.ttf);
+}
+
+@font-face {
+    font-family: 'Pokemon Hollow';
+    src: url(fonts/pokemon/Pokemon\ Hollow.ttf);
+}
+
+@font-face {
+    font-family: 'Pixel Emulator';
+    src: url(fonts/pixel-emulator-font/PixelEmulator-xq08.ttf);
+}
+
+body {
+    background-image: url("./images/background\ pkm\ home\ screen.png");
+    background-size: 100%; /* scale background image to cover the screen */
+    display: flex; /* make the body a flex container */
+    flex-direction: row; /* Horizontal layout */
+    align-items: stretch; /* Stretch items to fill the height */
+    height: 100vh; /* set full height (100%) of viewport */
+    margin: 0; /* set margin to 0 to remove any unnecessary spacing */
+}
+
+.left-half {
+    flex: 1; /* Take up half of the available width */
+    display: flex; /* make the container a flex container */
+    flex-direction: column; /* Vertical layout */
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px; /* Add padding for spacing */
+}
+
+.right-half {
+    flex: 1; /* Take up half of the available width */
+    position: relative; 
+    /* By default, relative positioning doesn't change the position of an element
+    This is only used as a reference point for any absolutely positioned children, since absolute
+    position is relative to the closest ancestor element with a position tag */
+    
+    overflow: hidden; /* Prevent images from overflowing */
+}
+
+.img-container {
+    position: absolute; 
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+}
+
+
+.title {
+    font-size: 70px;
+    font-family: 'Pokemon Solid';
+    text-align: center;
+    -webkit-text-stroke-width: 2px; /* add text outline stroke */
+    -webkit-text-stroke-color: #3c5aa6;
+    letter-spacing: 5px;
+    text-shadow: -5px -3px 0 #3c5aa6; /* add top-left shadow 5px left, 3px top offset with 0 blur */ 
+    color: #ffcb05; /* Set your text color */
+}
+
+.title span {
+    display: block;
+    margin-top: 10px;
+}
+
+
+#diglett {
+    width: 120px;
+    height: 30%;
+    position: absolute;
+    bottom: 50px;
+    left: 10px;    
+}
+
+#tinkaton {
+    width: 80%;
+    height: auto;
+    position: relative;
+    left: 130px;
+}
+
+button {
+    background-color: yellowgreen; /* Green */
+    position: absolute;
+    bottom: 120px;
+    left: 220px;
+    padding: 20px 52px;
+    font-family: 'Pixel Emulator';
+    color: black;
+    font-size: 25px;
+    display: inline-block;
+    
+    box-shadow: 0 3px #999;
+}
+
+button:hover{
+    background-color: #3c5aa6;
+    color: white;
+}
+
+button:active{
+    box-shadow: 0 0 #3c5aa6;
+    color: white;
+}
+
+
+

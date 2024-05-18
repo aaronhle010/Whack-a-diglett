@@ -1,0 +1,116 @@
+body {
+    background-image: url(./images/2ndscreenbg3.jpg);
+    background-size: 110%; /* change this setting depends on the background image choice 
+    to cover the screen */
+    backdrop-filter: blur(8.5px);
+    display: flex; /* make the whole body a flex box to divide into 3 different areas later */
+    flex-direction: column; /* set the align direction for items to be horizontal left to right */
+    height: 100vh; /* setting for when creating a flex container to ensure it covers 
+    the full height of any screen */
+    margin: 0; /* eliminate all unnecessary spacings around the flexbox */
+}
+
+
+.container{
+    display: flex; /* make all divided areas to be flexboxes */ 
+    flex-direction: row; /* set the align direction for items to be vertical top-down */
+    align-items: center; /* elements within the boxes are evenly spaced horizontally */
+    height: 100vh; /* setting for when creating a flex container to ensure it 
+    covers the full height of any screen */
+}
+
+#top {
+    display: flex; /* make all divided areas to be flexboxes */
+    flex-direction: row; /* set the align direction for items to be vertical top-down */
+    flex: 1; /* Take up half of the available height */
+    align-items: center;  
+}
+
+#top-middle {
+    justify-content: center; /* put all content in the center */
+    margin: auto; /* automatically set the margin space around the content */
+}
+
+.smallercontainerstop{
+    display: flex; /* make the top area also a flexbox */
+    flex-direction: row; /* set the align direction for items to be vertical top-down */
+}
+
+#top-left {
+    justify-content: flex-start; /* push content to the leftmost of the flexbox */
+    margin-left: 30px; /* margin will be 0 with flex-start, use this to overwrite and give element some space from the left edge */
+}
+
+#top-right {
+    justify-content: flex-end; /* push content to the rightmost of the flexbox */
+    margin-right: 30px;  /* margin will be 0 with flex-end, use this to overwrite and give element some space from the right edge */
+}
+
+h1 {
+    margin-top: 65px; /* add spacing from top for better visual alignment */
+    font-size: 60px;
+    color: white;
+}
+
+#selection-display {
+    text-align: center;
+    font-size:  20px;
+}
+
+/* This part aims to create a round button shape for the "back", "forward" feature by creating a circle shape
+ * for a button and then append an image into that circle
+ */
+.round {
+    border: none;
+    padding: 0;
+    border-radius: 50%;
+    overflow: hidden; /* hide unnecessary part of the image outside the button shape */
+    display: inline-block; /* align one button on the same line with the other one for visual aesthetics */
+    cursor: pointer; /* make the cursor change to pointing hand when hover over */
+}
+
+.round img {
+    width: 60px;
+    height: 60px;
+    display: block; 
+}
+
+
+#bottom {
+    justify-content: space-evenly; /* separate equal spacing between contents */
+    height: 100vh;
+}
+
+.smallcontainersbot{
+    display: flex; /* make the bottom area a flexbox as well */
+    flex-direction: column;
+    align-items: center;
+}
+
+h2, p {
+    color: whitesmoke;
+}
+
+.rectangle {
+    width: 220px;
+    height: 190px;
+    background: none;
+    border: solid 3.5px black;
+    border-radius: 25px;
+    padding: 0;
+    overflow: hidden; /* hide unnecessary part of the image outside the button shape */
+    display: inline-block; /* align one button on the same line with the other ones for visual aesthetics */
+    cursor: pointer;
+}
+
+.rectangle :hover {
+    opacity: 0.7;
+}
+
+.rectangle img {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+
+

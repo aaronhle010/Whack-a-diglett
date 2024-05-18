@@ -1,0 +1,100 @@
+body {
+    background-image: url(./images/game\ screen\ background\ 2.webp);
+    background-size: 110%; /* change this setting depends on the background image choice 
+    to cover the screen */
+    display: flex; /* make the whole body a flex box to divide into 3 different areas later */
+    flex-direction: row; /* set the align direction for items to be horizontal left to right */
+    height: 100vh; /* setting for when creating a flex container to ensure it covers 
+    the full height of any screen */
+    margin: 0; /* eliminate all unnecessary spacings around the flexbox */
+}
+
+.container{
+    display: flex; /* make all divided areas to be flexboxes */ 
+    flex-direction: column; /* set the align direction for items to be vertical top-down */
+    align-items: center; /* elements within the boxes are evenly spaced horizontally */
+    height: 100vh; /* setting for when creating a flex container to ensure it 
+    covers the full height of any screen */
+}
+
+#middle{
+    margin: auto; /* margin auto will evenly space the element in the center 
+    horizontally and also evenly divide the remaining space on the left and right side */
+    justify-content: center; /* evenly space element vertically */
+}
+
+#left, #right{
+    justify-content: flex-start; /* space element so that it stick to the top of the flexbox */
+    margin-top: 20px; /* the above setting will cause the element to stick to the top with 0 margin,
+    use this setting to give it more space */
+}
+
+#left {
+    margin-left: 10px; /* add 10px of spacing on the left side between the element and the box */
+    /* this setting is to give the back button some space on the left side of the screen, overriding the
+    0 margin setting initially in justify-content: flex-start */
+}
+
+#right {
+    margin-right: 10px; /* add 10px of spacing on the right side between the element and the box */
+    /* this setting is to give the restart button some space on the right side of the screen, overriding the
+    0 margin setting initially in justify-content: flex-start */
+}
+
+#board {
+    /* basic setting for board */
+    width: 540px; 
+    height: 540px;
+    background: url(./images/grassfield.webp);
+    background-size: cover;
+    border: 4px solid white;
+    border-radius: 25px;
+    margin: 0 auto; /* set top and bottom margin to 0 while aligning items to be center horizontally */
+    display: flex; /* make the board a flexbox */
+    flex-wrap: wrap; /* this setting prevent elements to overflow the width of the box and automatically
+    distribute to another line for alignment */
+    justify-content: space-evenly;
+}
+
+.hole {
+    width: 30%; /* Adjust as needed */
+    height: 170px; /* Adjust as needed */
+    box-sizing: border-box;
+    /*border: 1px solid white;*/
+    margin: 5px; 
+    display: flex; /* make each hole itself a flexbox */
+    align-items: center;
+    justify-content: center;
+    position: relative; /* This is only used as a parent reference point for setting the absolute
+    positioned mole */
+    background-image: url(./images/hole3.png);
+    background-size: cover;
+    background-position: center 20px;
+}
+
+#board .hole img {
+    width: 120px;
+    height: 110px;
+    cursor: url(./images/tinkaton\ whack.png), auto;
+}
+
+
+button {
+    border: none;
+    padding: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    cursor: pointer; /* make the cursor change to pointing hand when hover over */
+}
+
+#back, #restart {
+    width: 60px;
+    height: 60px;
+    display: block;
+}
+
+#score-display{
+    color: white;
+    font-size: 30px;
+}
